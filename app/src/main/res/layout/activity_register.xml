@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#ED3338">
+
+    <LinearLayout
+        android:id="@+id/head"
+        android:layout_width="0dp"
+        android:layout_height="145dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="89dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/logo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/reg_sect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/fName"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/edittext_bg_tint"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center_vertical"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="#000000"
+                android:textColorHint="#666666"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toTopOf="@id/email"
+                tools:ignore="Autofill,HardcodedText"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/edittext_bg_tint"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center_vertical"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="#000000"
+                android:textColorHint="#666666"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="Autofill,HardcodedText" />
+
+            <EditText
+                android:id="@+id/pass"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/edittext_bg_tint"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center_vertical"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="#000000"
+                android:textColorHint="#666666"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email"
+                tools:ignore="Autofill,HardcodedText" />
+
+            <EditText
+                android:id="@+id/cpass"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/edittext_bg_tint"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center_vertical"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="#000000"
+                android:textColorHint="#666666"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pass"
+                tools:ignore="Autofill,HardcodedText" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addr_sect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/addr"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/edittext_bg_tint"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center_vertical"
+                android:hint="Address"
+                android:inputType="text|textNoSuggestions"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="#000000"
+                android:textColorHint="#666666"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fName"
+                tools:ignore="Autofill,HardcodedText" />
+
+            <EditText
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/edittext_bg_tint"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center_vertical"
+                android:hint="City"
+                android:inputType="textNoSuggestions"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="#000000"
+                android:textColorHint="#666666"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addr"
+                tools:ignore="Autofill,HardcodedText" />
+
+            <EditText
+                android:id="@+id/pincd"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/edittext_bg_tint"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center_vertical"
+                android:hint="Pincode"
+                android:inputType="text|phone"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="#000000"
+                android:textColorHint="#666666"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/city"
+                tools:ignore="Autofill,HardcodedText" />
+
+            <EditText
+                android:id="@+id/phno"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/edittext_bg_tint"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center_vertical"
+                android:hint="Mobile Number"
+                android:inputType="text|phone"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="#000000"
+                android:textColorHint="#666666"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pincd"
+                tools:ignore="Autofill,HardcodedText" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btnsignup_gradient"
+            android:backgroundTint="#D80F0F"
+            android:gravity="center|center_horizontal"
+            android:text="Sign Up"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:text="Already have an account? Sign In"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            tools:ignore="HardcodedText" />
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

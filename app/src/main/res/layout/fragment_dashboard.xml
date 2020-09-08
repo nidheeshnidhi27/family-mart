@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DashboardFragment">
+
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#13B4FF"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <EditText
+
+            android:id="@+id/edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_bg_tint"
+            android:backgroundTint="#FFFFFF"
+            android:drawableEnd="@drawable/ic_search"
+            android:drawablePadding="3dp"
+            android:hint="Search Product"
+            android:inputType="textShortMessage|textNoSuggestions|text"
+            android:padding="3dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="#000000"
+            android:textColorHint="#999999"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+
+        <ImageView
+            android:id="@+id/filter_img"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="50dp"
+            android:layout_marginEnd="7dp"
+            android:padding="10dp"
+            android:tint="#0d176c"
+            app:srcCompat="@drawable/ic_baseline_filter_list_24"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_products"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_bar"
+        tools:listitem="@layout/adapter_products_list">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:title="Default sorting"
+    android:id="@+id/defaultt"/>
+    <item
+        android:title="Sort by popularity"
+        android:id="@+id/popularity"/>
+    <item
+        android:title="sort by average rating"
+        android:id="@+id/rating"/>
+    <item
+        android:title="Sort by latest"
+        android:id="@+id/latest"/>
+    <item
+        android:title="Sort by price:low to high"
+        android:id="@+id/pricelow"/>
+    <item
+        android:title="Sort by price:high to low"
+        android:id="@+id/pricehigh"/>
+</menu>

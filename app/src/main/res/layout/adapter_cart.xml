@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+
+        <ImageView
+            android:id="@+id/tv_product_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            tools:srcCompat="@tools:sample/avatars"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="Product Name"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_regular_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:foreground="@drawable/strikethrough"
+                android:gravity="start|center_vertical"
+                android:padding="3dp"
+                android:text="Regular Price"
+                android:textColor="#DDFF1B1B"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|end"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:padding="3dp"
+                android:text="Offer Price"
+                android:textColor="#269C06"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="3dp"
+                android:gravity="center_vertical|end"
+                android:text="Quantity"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/et_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:ems="3"
+                android:inputType="number|numberDecimal"
+                android:padding="10dp"
+                android:text="1"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_update_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/btnsignup_gradient"
+                android:backgroundTint="#278CCF"
+                android:gravity="center"
+                android:text="Update"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn_rmv"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/btnsignup_gradient"
+                android:backgroundTint="#F44336"
+                android:text="REMOVE" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

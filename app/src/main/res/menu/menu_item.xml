@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home" />
+    <item
+        android:title="Grocery"
+        android:id="@+id/grocery"/>
+    <item
+        android:title="Vegetables"
+        android:id="@+id/vegitables"/>
+    <item
+        android:title="Chocolate"
+        android:id="@+id/chocolate"/>
+    <item
+        android:title="Ice Cream"
+        android:id="@+id/icecream"/>
+    <item
+        android:title="Electronics"
+        android:id="@+id/electronics"/>
+    <item
+        android:title="Account"
+        android:id="@+id/account"/>
+
+
+</menu>

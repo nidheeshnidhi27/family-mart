@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view_drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="60dp"
+            android:id="@+id/rv_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </com.google.android.material.navigation.NavigationView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#13B4FF">
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <ImageView
+            android:id="@+id/main_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginStart="15dp"
+            android:tint="#FFFFFF"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_baseline_menu_24"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_toRightOf="@+id/main_menu"
+            android:padding="5dp"
+            app:srcCompat="@drawable/logo"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignEnd="@id/toolbar"
+            android:layout_marginEnd="10dp"
+            android:padding="13dp"
+            android:tint="#FFFFFF"
+            app:srcCompat="@drawable/ic_baseline_shopping_cart_24"
+            tools:ignore="ContentDescription" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_marginBottom="?attr/actionBarSize"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/mobile_navigation" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:background="#13B4FF"
+            app:itemIconTint="#0d176c"
+            app:itemTextColor="#0d176c"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

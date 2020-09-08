@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "584006560146",
+    "firebase_url": "https://family-mart-a92e4.firebaseio.com",
+    "project_id": "family-mart-a92e4",
+    "storage_bucket": "family-mart-a92e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584006560146:android:1814e26b5a1bec2392394b",
+        "android_client_info": {
+          "package_name": "com.alp.familymart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584006560146-p13db080hrg95mkmgdqc6cmqnlm43vgi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWN4y_CpW_ZwB9VG9j-uU96bTUJJxEzYQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584006560146-p13db080hrg95mkmgdqc6cmqnlm43vgi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
